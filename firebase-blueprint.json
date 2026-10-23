@@ -1,0 +1,44 @@
+{
+  "collections": {
+    "users": {
+      "documents": {
+        "{userId}": {
+          "collections": {
+            "transcripts": {
+              "documents": {
+                "{transcriptId}": {
+                  "fields": {
+                    "studentName": { "type": "string" },
+                    "studentId": { "type": "string" },
+                    "studentRoll": { "type": "string" },
+                    "session": { "type": "string" },
+                    "schoolName": { "type": "string" },
+                    "schoolAddress": { "type": "string" },
+                    "schoolLogoUrl": { "type": "string" },
+                    "theme": { "type": "string" },
+                    "subjects": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": { "type": "string" },
+                          "marks": { "type": "number" },
+                          "grade": { "type": "string" },
+                          "gradePoint": { "type": "number" },
+                          "credits": { "type": "number" }
+                        }
+                      }
+                    },
+                    "createdAt": { "type": "timestamp" },
+                    "updatedAt": { "type": "timestamp" },
+                    "userId": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
